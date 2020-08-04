@@ -1,0 +1,83 @@
+
+<!-- hyperlink example -->
+<a href="http://www.example.com" data-confirm="Are you sure you want to load this URL?">Anchor</a>
+
+<!-- button example -->
+<button type="button" data-confirm="Are you sure you want to click the button?">Button</button>
+
+<!-- form example -->
+<form action="http://www.example.com" data-confirm="Are you sure you want to submit the form?">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- select option example -->
+<select>
+    <option>Select an option:</option>
+    <option data-confirm="Are you want to select this option?">Here</option>
+</select>
+
+
+
+
+
+
+ <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">RepairShopr Information</h4>
+      <form class="needs-validation" novalidate action="add_asset.php" method="POST" data-confirm="Please ensure the IPADDRESS is correct!">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="rs_customer_id">Customer ID</label>
+            <input type="text" class="form-control" id="rs_customer_id" name="rs_customer_id" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid RS Customer ID is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="rs_asset_id">Asset ID</label>
+            <input type="text" class="form-control" id="rs_asset_id" name="rs_asset_id" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid RS Asset ID is required.
+            </div>
+          </div>
+        </div>
+
+       
+
+        <div class="mb-3">
+          <label for="ipaddress">Printer IP Address <span class="text-muted">(required)</span></label>
+          <input type="text" class="form-control" id="ipaddress" name="ipaddress" placeholder="192.168.0.50">
+          <div class="invalid-feedback">
+            Please enter a valid IP Address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="snmp_community">SNMP Community</label>
+          <input type="text" class="form-control" id="snmp_community" name="snmp_community" placeholder="default is usually public" required>
+          <div class="invalid-feedback">
+            Please enter the SNMP Community.
+          </div>
+        </div>
+
+       
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="machine_type">Machine Type</label>
+            <select class="custom-select d-block w-100" id="machine_type" name="machine_type" required>
+              <option value="">Choose...</option>
+              <option>BH</option>
+              <option>MFX</option>
+              <option>KIP</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid machine type.
+            </div>
+          </div>
+         
+        </div>
+      
+        <hr class="mb-4">
+        <input type="hidden" name="form_submitted" value="1" />
+        <input class="btn btn-primary btn-lg btn-block"  type="submit" value="Add Asset" name="submitted">
+      </form>
+    </div>
