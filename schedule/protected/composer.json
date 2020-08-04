@@ -1,0 +1,39 @@
+{
+    "name": "Webcron",
+    "description": "Web UI to run cron jobs",
+    "keywords": ["web cron", "cron jobs", "schedule", "cron task"],
+    "homepage": "http://www.php5developer.com",
+    "type": "Yii2 project",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.5",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "bower-asset/components-font-awesome": "*",
+        "driftyco/ionicons": "*",
+        "yiisoft/yii2-imagine": "~2.0.0",
+        "mtdowling/cron-expression": "@dev",
+        "php-curl-class/php-curl-class": "*",
+		"2amigos/yii2-date-picker-widget" : "~1.0",
+        "kartik-v/yii2-widget-datetimepicker": "*",
+        "2amigos/yii2-chartjs-widget" : "~2.0",
+        "symfony/process": "^3.4"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

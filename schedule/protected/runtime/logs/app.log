@@ -1,0 +1,116 @@
+2019-11-06 07:52:49 [192.168.86.235][-][09j34npjt9v6nc6rckkec0k52g][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php:660
+Stack trace:
+#0 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(660): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#3 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Schema.php(442): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(838): yii\db\Schema->quoteValue('1')
+#6 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(199): yii\db\Connection->quoteValue('1')
+#7 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(1018): yii\db\Command->getRawSql()
+#8 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(1039): yii\db\Command->logQuery('yii\\db\\Command:...')
+#9 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(400): yii\db\Command->queryInternal('fetch', NULL)
+#10 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Query.php(259): yii\db\Command->queryOne()
+#11 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(292): yii\db\Query->one(NULL)
+#12 /var/www/html/pi-monitor/schedule/protected/models/User.php(78): yii\db\ActiveQuery->one()
+#13 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(663): app\models\User::findIdentity('1')
+#14 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#15 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#16 /var/www/html/pi-monitor/schedule/protected/components/AppController.php(25): yii\web\User->getIsGuest()
+#17 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/BaseObject.php(108): app\components\AppController->init()
+#18 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Controller.php(86): yii\base\BaseObject->__construct(Array)
+#19 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#20 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#21 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('app\\controllers...', Array, Array)
+#22 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get('app\\controllers...', Array)
+#23 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(643): yii\BaseYii::createObject('app\\controllers...', Array)
+#24 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#25 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#26 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#27 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /var/www/html/pi-monitor/schedule/index.php(13): yii\base\Application->run()
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php:597
+Stack trace:
+#0 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#1 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Schema.php(442): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Connection.php(838): yii\db\Schema->quoteValue('1')
+#4 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(199): yii\db\Connection->quoteValue('1')
+#5 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(1018): yii\db\Command->getRawSql()
+#6 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(1039): yii\db\Command->logQuery('yii\\db\\Command:...')
+#7 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Command.php(400): yii\db\Command->queryInternal('fetch', NULL)
+#8 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/Query.php(259): yii\db\Command->queryOne()
+#9 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(292): yii\db\Query->one(NULL)
+#10 /var/www/html/pi-monitor/schedule/protected/models/User.php(78): yii\db\ActiveQuery->one()
+#11 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(663): app\models\User::findIdentity('1')
+#12 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#13 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#14 /var/www/html/pi-monitor/schedule/protected/components/AppController.php(25): yii\web\User->getIsGuest()
+#15 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/BaseObject.php(108): app\components\AppController->init()
+#16 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Controller.php(86): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#18 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/di/Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#19 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('app\\controllers...', Array, Array)
+#20 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get('app\\controllers...', Array)
+#21 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(643): yii\BaseYii::createObject('app\\controllers...', Array)
+#22 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#23 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#24 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#25 /var/www/html/pi-monitor/schedule/protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/html/pi-monitor/schedule/index.php(13): yii\base\Application->run()
+#27 {main}
+Additional Information:
+
+2019-11-06 07:52:49 [192.168.86.235][-][09j34npjt9v6nc6rckkec0k52g][info][application] $_COOKIE = [
+    'language' => '4933e4bd3a5c2a2593e9ffa2521a76c3fa1fc359efe4654a9755efc4c38b91b3a:2:{i:0;s:8:\"language\";i:1;s:5:\"en-US\";}'
+    '_csrf' => '0c40890dfad7d2296f1279150ea1633069d7730730a755c5b9ff187c1857d741a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wBny2xY9clojDcGKfINEC6vOZA_Of-2_\";}'
+    'PHPSESSID' => '09j34npjt9v6nc6rckkec0k52g'
+    '_identity' => 'a1ccfb7e33ac785e8b18c1a65bab43c2efdd333f00da81e096fb532be6ac302fa:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"-v4jHI8C-9oHS5oEgEOUNRjYl6O4KZHU\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/pi-monitor/schedule/'
+    'badLoginCount' => 3
+    '__captcha/site/captcha' => 'gtcevlv'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.86.234'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=4933e4bd3a5c2a2593e9ffa2521a76c3fa1fc359efe4654a9755efc4c38b91b3a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22en-US%22%3B%7D; _csrf=0c40890dfad7d2296f1279150ea1633069d7730730a755c5b9ff187c1857d741a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wBny2xY9clojDcGKfINEC6vOZA_Of-2_%22%3B%7D; PHPSESSID=09j34npjt9v6nc6rckkec0k52g; _identity=a1ccfb7e33ac785e8b18c1a65bab43c2efdd333f00da81e096fb532be6ac302fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22-v4jHI8C-9oHS5oEgEOUNRjYl6O4KZHU%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.38 (Raspbian) Server at 192.168.86.234 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Raspbian)'
+    'SERVER_NAME' => '192.168.86.234'
+    'SERVER_ADDR' => '192.168.86.234'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.86.235'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pi-monitor/schedule/index.php'
+    'REMOTE_PORT' => '63096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pi-monitor/schedule/'
+    'SCRIPT_NAME' => '/pi-monitor/schedule/index.php'
+    'PHP_SELF' => '/pi-monitor/schedule/index.php'
+    'REQUEST_TIME_FLOAT' => 1573019569.126
+    'REQUEST_TIME' => 1573019569
+]
